@@ -227,10 +227,19 @@ a:active {
 /*section2 start*/
 #second {
   position: relative;
-  padding-top: 80px;
+  width: 100%;
   height: 720px;
-  background: url(../img/seciton2/bg_introduction.png) no-repeat center center;
   border-bottom: 1px solid #e9e9e9;
+  overflow: hidden;
+}
+
+#second .sec2_bg {
+  padding-top: 80px;
+  background: url(../img/seciton2/bg_introduction.png) no-repeat 50% 0;
+  width: 1000px;
+  height: 960px;
+  position: relative;
+  margin: 0 auto;
 }
 
 .dot_wrap {
@@ -297,18 +306,18 @@ a:active {
 
 .dot_wrap1 {
   position: absolute;
-  top: 385px;
-  left: 913px;
+  top: 40.2%;
+  left: 46.2%;
 }
 .dot_wrap2 {
   position: absolute;
-  top: 336px;
-  left: 994px;
+  top: 35%;
+  left: 54.3%;
 }
 .dot_wrap3 {
   position: absolute;
-  top: 577px;
-  left: 986px;
+  top: 60%;
+  left: 53.4%;
 }
 
 /*section third start*/
@@ -452,4 +461,35 @@ footer .copyright {
 .on {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media screen and (max-width: 991px) {
+  .carousel-item {
+    height: 400px;
+  }
+  .carousel-item img {
+    object-fit: contain;
+    transform: scale(1.8);
+  }
+  .dot_wrap1,
+  .dot_wrap2,
+  .dot_wrap3 {
+    opacity: 0;
+  }
+
+  #second {
+    height: auto;
+  }
+
+  #second .sec2_bg {
+    padding-top: 20px;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 500px;
+  }
+
+  .carousel-caption {
+    top: 50%;
+  }
 }
